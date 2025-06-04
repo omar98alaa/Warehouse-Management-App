@@ -13,14 +13,18 @@ namespace Warehouse_Management_App.Entities
         //
         //  Properties
         //
-        public DbSet<Warehouse> Warehouses { get; set; }
-        public DbSet<Item> Items { get; set; }
-        public DbSet<ItemUnit> ItemUnits { get; set; }
-        public DbSet<User> User { get; set; }
-        public DbSet<WarehouseItem> WarehouseItems { get; set; }
-        public DbSet<Import> Imports { get; set; }
-        public DbSet<Export> Exports { get; set; }
-        public DbSet<Transfer> Transfers { get; set; }
+        public virtual DbSet<Warehouse> Warehouses { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
+        public virtual DbSet<Unit> Units { get; set; }
+        public virtual DbSet<ProductUnit> ProductUnits { get; set; }
+        public virtual DbSet<Contact> Contacts { get; set; }
+        public virtual DbSet<WarehouseProduct> WarehouseProducts { get; set; }
+        public virtual DbSet<Import> Imports { get; set; }
+        public virtual DbSet<Export> Exports { get; set; }
+        public virtual DbSet<Transfer> Transfers { get; set; }
+        public virtual DbSet<ImportedProduct> ImportedProducts { get; set; }
+        public virtual DbSet<ExportedProduct> ExportedProducts { get; set; }
+        public virtual DbSet<TransferedProduct> TransferedProducts { get; set; }
 
 
         //
@@ -35,6 +39,21 @@ namespace Warehouse_Management_App.Entities
             connectionStringBuilder.IntegratedSecurity = true;
 
             optionsBuilder.UseSqlServer(connectionStringBuilder.ConnectionString);
+        }
+
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
+        {
+            base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Transfer>()
+                .HasOne(x => x.SourceWarehouse)
+                .WithMany(x => x.OutboundTransfers)
+                .OnDelete(DeleteBehavior.Restrict);
+
+            modelBuilder.Entity<Transfer>()
+                .HasOne(x => x.DestinationWarehouse)
+                .WithMany(x => x.InboundTransfers)
+                .OnDelete(DeleteBehavior.Restrict);
         }
     }
 }

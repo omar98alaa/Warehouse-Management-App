@@ -1,6 +1,6 @@
-﻿using System;
+﻿using Microsoft.EntityFrameworkCore;
+using System;
 using System.Collections.Generic;
-using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -9,7 +9,8 @@ using System.Threading.Tasks;
 
 namespace Warehouse_Management_App.Entities
 {
-    class Import
+    [Index("WarehouseID", "ProductCode", "ProductionDate", "AddedDate", IsUnique = true)]
+    class WarehouseProduct
     {
         //
         //  Properties
@@ -17,20 +18,23 @@ namespace Warehouse_Management_App.Entities
         [Key, DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int ID { get; set; }
 
-        public DateTime IssueDate { get; set; }
+        public DateTime ProductionDate { get; set; }
+
+        public int Quantity { get; set; }
+
+        public DateTime AddedDate { get; set; }
 
         [ForeignKey("Warehouse")]
         public int WarehouseID { get; set; }
 
-        [ForeignKey("Contact")]
-        public int ContactID { get; set; }
+        [ForeignKey("Product")]
+        public int ProductCode { get; set; }
 
 
         //
         //  Relations
         //
         public virtual Warehouse Warehouse { get; set; }
-        public virtual Contact Contact { get; set; }
-        public virtual ICollection<ImportedProduct> ImportedProducts { get; set; }
+        public virtual Product Product { get; set; }
     }
 }
