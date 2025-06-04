@@ -73,9 +73,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(236, 240, 241);
-            panel1.Location = new Point(53, 190);
+            panel1.Location = new Point(103, 181);
             panel1.Name = "panel1";
-            panel1.Size = new Size(914, 1);
+            panel1.Size = new Size(864, 1);
             panel1.TabIndex = 44;
             // 
             // SuppliersComboBox

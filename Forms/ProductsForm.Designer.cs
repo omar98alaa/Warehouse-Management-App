@@ -73,9 +73,9 @@
             // panel1
             // 
             panel1.BackColor = Color.FromArgb(236, 240, 241);
-            panel1.Location = new Point(53, 246);
+            panel1.Location = new Point(103, 237);
             panel1.Name = "panel1";
-            panel1.Size = new Size(914, 2);
+            panel1.Size = new Size(864, 1);
             panel1.TabIndex = 22;
             // 
             // ProductComboBox
@@ -267,7 +267,7 @@
             panel2.BackColor = Color.FromArgb(236, 240, 241);
             panel2.Location = new Point(509, 282);
             panel2.Name = "panel2";
-            panel2.Size = new Size(2, 270);
+            panel2.Size = new Size(1, 270);
             panel2.TabIndex = 23;
             // 
             // label9

@@ -87,7 +87,7 @@
             // ClientsCountLabel
             // 
             ClientsCountLabel.Dock = DockStyle.Bottom;
-            ClientsCountLabel.Font = new Font("Verdana", 15.75F, FontStyle.Bold);
+            ClientsCountLabel.Font = new Font("Verdana", 20.25F, FontStyle.Bold);
             ClientsCountLabel.ForeColor = Color.FromArgb(27, 188, 155);
             ClientsCountLabel.Location = new Point(15, 38);
             ClientsCountLabel.Name = "ClientsCountLabel";
@@ -124,7 +124,7 @@
             // ExportsCountLabel
             // 
             ExportsCountLabel.Dock = DockStyle.Bottom;
-            ExportsCountLabel.Font = new Font("Verdana", 15.75F, FontStyle.Bold);
+            ExportsCountLabel.Font = new Font("Verdana", 20.25F, FontStyle.Bold);
             ExportsCountLabel.ForeColor = Color.FromArgb(27, 188, 155);
             ExportsCountLabel.Location = new Point(15, 38);
             ExportsCountLabel.Name = "ExportsCountLabel";
@@ -161,7 +161,7 @@
             // SuppliersCountLabel
             // 
             SuppliersCountLabel.Dock = DockStyle.Bottom;
-            SuppliersCountLabel.Font = new Font("Verdana", 15.75F, FontStyle.Bold);
+            SuppliersCountLabel.Font = new Font("Verdana", 20.25F, FontStyle.Bold);
             SuppliersCountLabel.ForeColor = Color.FromArgb(27, 188, 155);
             SuppliersCountLabel.Location = new Point(15, 38);
             SuppliersCountLabel.Name = "SuppliersCountLabel";
@@ -198,7 +198,7 @@
             // ImportsCountLabel
             // 
             ImportsCountLabel.Dock = DockStyle.Bottom;
-            ImportsCountLabel.Font = new Font("Verdana", 15.75F, FontStyle.Bold);
+            ImportsCountLabel.Font = new Font("Verdana", 20.25F, FontStyle.Bold);
             ImportsCountLabel.ForeColor = Color.FromArgb(27, 188, 155);
             ImportsCountLabel.Location = new Point(15, 38);
             ImportsCountLabel.Name = "ImportsCountLabel";
@@ -235,7 +235,7 @@
             // StockCountLabel
             // 
             StockCountLabel.Dock = DockStyle.Bottom;
-            StockCountLabel.Font = new Font("Verdana", 15.75F, FontStyle.Bold);
+            StockCountLabel.Font = new Font("Verdana", 20.25F, FontStyle.Bold);
             StockCountLabel.ForeColor = Color.FromArgb(27, 188, 155);
             StockCountLabel.Location = new Point(15, 38);
             StockCountLabel.Name = "StockCountLabel";
@@ -272,7 +272,7 @@
             // WarehousesCountLabel
             // 
             WarehousesCountLabel.Dock = DockStyle.Bottom;
-            WarehousesCountLabel.Font = new Font("Verdana", 15.75F, FontStyle.Bold);
+            WarehousesCountLabel.Font = new Font("Verdana", 20.25F, FontStyle.Bold);
             WarehousesCountLabel.ForeColor = Color.FromArgb(27, 188, 155);
             WarehousesCountLabel.Location = new Point(15, 38);
             WarehousesCountLabel.Name = "WarehousesCountLabel";
