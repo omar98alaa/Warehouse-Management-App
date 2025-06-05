@@ -67,4 +67,4 @@ This system allows users to efficiently manage warehouse operations, including:
 
 ## 🧪 Screenshots
 
-![app screenshot](./screenshots/app-screenshot.png)
+![app screenshot](https://github.com/omar98alaa/Warehouse-Management-App/blob/master/screenshots/App-screenshot.png)
